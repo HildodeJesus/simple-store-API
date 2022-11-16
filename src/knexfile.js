@@ -1,15 +1,13 @@
-// Update with your config settings.
-
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
  */
-module.exports = {
+export default {
 	client: "mysql2",
 	connection: {
-		host: process.env.KNEX_HOST,
-		port: process.env.KNEX_PORT,
-		user: process.env.KNEX_USER,
-		password: process.env.KNEX_PASSWORD,
-		database: process.env.KNEX_DATABASE,
+		host: "127.0.0.1",
+		port: "3306",
+		user: "root",
+		password: "245524",
+		database: "commerceapi",
 	},
 };

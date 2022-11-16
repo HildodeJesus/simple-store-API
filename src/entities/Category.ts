@@ -1,18 +1,15 @@
 import { v4 } from "uuid";
 import { dateNow } from "../utils/handleDate";
 
-export class User {
+export class Category {
 	public readonly id: string;
-	public first_name: string;
-	public last_name: string;
-	public email: string;
-	public password: string;
-	public role: number;
-	public readonly createdAt: string;
-	public updatedAt: string;
+	public name: string;
+	public img?: string;
+	public readonly createdAt?: string;
+	public updatedAt?: string;
 
 	constructor(
-		props: Omit<User, "id" | "createdAt" | "updatedAt">,
+		props: Omit<Category, "id" | "createdAt" | "updatedAt">,
 		id?: string,
 		updatedAt?: string
 	) {
@@ -23,7 +20,6 @@ export class User {
 		if (!updatedAt) {
 			this.updatedAt = dateNow();
 		}
-
 		if (!id) {
 			this.id = v4();
 		}
